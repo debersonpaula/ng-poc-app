@@ -10,10 +10,10 @@ export class FormControlComponent implements AfterViewInit {
   @Input() name = '';
   @Input() placeholder = '';
   public control = new FormControl();
-  constructor(protected cd: ChangeDetectorRef) {
+  constructor(/* protected cd: ChangeDetectorRef */) {
   }
   ngAfterViewInit() {
-    this.cd.detectChanges();
+    // this.cd.detectChanges();
   }
 }
 
@@ -28,11 +28,11 @@ export class FormGroupComponent implements AfterViewInit {
   @ContentChildren(FormControlComponent) private _controls: QueryList<FormControlComponent>;
   public group = new FormGroup({});
 
-  constructor(protected cd: ChangeDetectorRef) {
+  constructor(/* protected cd: ChangeDetectorRef */) {
   }
 
   ngAfterViewInit() {
-    this.cd.detectChanges();
+    // this.cd.detectChanges();
     // include groups
     this._groups.forEach(child => {
       if (child != this) {
