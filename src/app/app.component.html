@@ -1,0 +1,13 @@
+<dsc-group #master>
+    <dsc-input name="nome" placeholder="Nome"></dsc-input>
+    <dsc-input name="age" placeholder="Idade"></dsc-input>
+    <dsc-group name="docs">
+        <dsc-input name="rg" placeholder="RG"></dsc-input>
+    </dsc-group>
+</dsc-group>
+
+<!-- <div>
+    Results: {{ master.data() | json }}
+</div> -->
+
+<button (click)="showData()">Show Data</button>
